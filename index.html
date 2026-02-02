@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Purva ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+      font-family: 'Georgia', serif;
+      text-align: center;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .card {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 40px;
+      border-radius: 25px;
+      max-width: 520px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      animation: fadeIn 2s ease;
+    }
+    h1 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin: 15px 0;
+    }
+    h2 {
+      margin-top: 25px;
+      font-size: 28px;
+    }
+    button {
+      margin-top: 25px;
+      background: #fff;
+      color: #ff6f91;
+      border: none;
+      padding: 14px 32px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    .photos img {
+      width: 100%;
+      border-radius: 18px;
+      margin-top: 15px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+    .photos img:nth-child(1) { animation-delay: 1s; }
+    .photos img:nth-child(2) { animation-delay: 2s; }
+    .photos img:nth-child(3) { animation-delay: 3s; }
+
+    #mainContent, #finalMessage {
+      display: none;
+      animation: fadeIn 2s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+
+    <!-- Opening -->
+    <div id="opening">
+      <h1>💌</h1>
+      <p>Harsh sent you something…</p>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent">
+      <h1>Purva ❤️</h1>
+
+      <p>
+        In this loud world,<br>
+        you are my calm.<br>
+        In every uncertain moment,<br>
+        you are my home.
+      </p>
+
+      <!-- Photos -->
+      <div class="photos">
+        <img src="photo1.jpg" alt="Us ❤️">
+        <img src="photo2.jpg" alt="Purva 💕">
+        <img src="photo3.jpg" alt="Memories ✨">
+      </div>
+
+      <p>
+        Loving you feels natural,<br>
+        like breathing without effort.
+      </p>
+
+      <h2>Will you be my Valentine? 💞</h2>
+
+      <button onclick="yes()">Yes, always 💖</button>
+    </div>
+
+    <!-- Final Message -->
+    <div id="finalMessage">
+      <p>
+        Thank you for choosing me, Purva.<br>
+        I promise to stand by you —<br>
+        on easy days and hard ones,<br>
+        today and every tomorrow.
+      </p>
+      <p>
+        With all my love,<br>
+        <strong>Harsh ❤️</strong>
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("opening").style.display = "none";
+      document.getElementById("mainContent").style.display = "block";
+    }, 3000);
+
+    function yes() {
+      document.getElementById("mainContent").style.display = "none";
+      document.getElementById("finalMessage").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
